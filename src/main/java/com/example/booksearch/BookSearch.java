@@ -12,7 +12,7 @@ public class BookSearch {
             return;
         }
 
-        String searchTerm="Stay Out of the Basement"        
+        String searchTerm="Stay Out of the Basement";     
         System.out.println("\nSearching for: " + Stay out of the Basement + "...\n");
         searchBooks(libraryFolder, "", searchTerm);
         scanner.close();
