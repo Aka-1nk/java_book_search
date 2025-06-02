@@ -1,7 +1,6 @@
 package com.example.booksearch;
 
 import java.io.File;
-import java.util.Scanner;
 
 public class BookSearch {
     public static void main(String[] args) {
@@ -12,10 +11,9 @@ public class BookSearch {
             return;
         }
 
-        String searchTerm="Stay Out of the Basement";     
-        System.out.println("\nSearching for: " + Stay out of the Basement + "...\n");
+        String searchTerm = "Stay Out of the Basement";     
+        System.out.println("\nSearching for: " + searchTerm + "...\n");
         searchBooks(libraryFolder, "", searchTerm);
-        scanner.close();
     }
 
     public static void searchBooks(File folder, String category, String searchTerm) {
@@ -26,7 +24,7 @@ public class BookSearch {
             if (file.isDirectory()) {
                 searchBooks(file, file.getName(), searchTerm);
             } else if (file.getName().toLowerCase().endsWith(".pdf") && 
-                      file.getName().toLowerCase().contains(searchTerm)) {
+                       file.getName().toLowerCase().contains(searchTerm.toLowerCase())) {
                 System.out.println("Found in [" + category + "]: " + file.getName());
             }
         }
