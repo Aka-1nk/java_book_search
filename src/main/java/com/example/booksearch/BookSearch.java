@@ -12,11 +12,8 @@ public class BookSearch {
             return;
         }
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter book name: ");
-        String searchTerm = scanner.nextLine().toLowerCase().trim();
-        
-        System.out.println("\nSearching for: " + searchTerm + "...\n");
+        String searchTerm="Stay Out of the Basement"        
+        System.out.println("\nSearching for: " + Stay out of the Basement + "...\n");
         searchBooks(libraryFolder, "", searchTerm);
         scanner.close();
     }
